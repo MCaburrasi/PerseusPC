@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="335.0" prefWidth="299.0" style="-fx-background-radius: 18; -fx-background-color: FDF; -fx-padding: 12;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caburrasi.marcos.perseus.components.makepost.MakePostController">
+   <children>
+      <VBox layoutX="18.0" layoutY="18.0" prefHeight="297.0" prefWidth="257.0" style="-fx-spacing: 12;">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="257.0">
+               <children>
+                  <ImageView fx:id="pfp" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <FlowPane prefHeight="22.0" prefWidth="204.0">
+                     <children>
+                        <Label fx:id="text" prefHeight="17.0" prefWidth="202.0" style="-fx-text-fill: BLACK;" text="Label">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </HBox>
+            <ImageView fx:id="image" fitHeight="196.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox prefHeight="40.0" prefWidth="257.0" style="-fx-spacing: 28;">
+               <children>
+                  <Button fx:id="button1" mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" text="Perseus" />
+                  <Button fx:id="button2" minWidth="46.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" text="Perseus" />
+                  <Button fx:id="button3" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" text="Perseus" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
