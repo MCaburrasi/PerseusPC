@@ -59,7 +59,7 @@ public class Client {
     public String writeAndRead(String s) throws InterruptedException {
         out.println(s);
 
-        while (!read){
+        while (!read && !s.startsWith("Add") && !s.startsWith("login")){
             Thread.sleep(500);
         }
 

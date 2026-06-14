@@ -2,11 +2,16 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane prefHeight="893.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caburrasi.marcos.perseus.mainscreen.MainScreenController">
@@ -26,8 +31,40 @@
       </AnchorPane>
       <TabPane layoutX="-8.0" layoutY="-8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="835.0" prefWidth="608.0" style="-fx-tab-min-width: 280; -fx-tab-min-height: 30;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="POSTS" />
-          <Tab text="NEWS" />
+          <Tab onSelectionChanged="#changeScreen" text="POSTS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content></Tab>
+          <Tab text="NEWS">
+               <content>
+                  <AnchorPane prefHeight="808.0" prefWidth="564.0">
+                     <children>
+                        <VBox layoutX="19.0" layoutY="14.0" prefHeight="769.0" prefWidth="571.0" style="-fx-alignment: TOP_CENTER; -fx-spacing: 40;">
+                           <children>
+                              <Pane prefHeight="25.0" prefWidth="571.0" />
+                              <Label fx:id="title" prefWidth="456.0" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="image" fitHeight="283.0" fitWidth="487.0" pickOnBounds="true" preserveRatio="true" />
+                              <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="316.0" prefWidth="596.0">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                                 <content>
+                                    <Label fx:id="content" prefWidth="569.0" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
         </tabs>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -36,6 +73,5 @@
             <Insets />
          </opaqueInsets>
       </TabPane>
-      <AnchorPane layoutX="-186.0" layoutY="480.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
