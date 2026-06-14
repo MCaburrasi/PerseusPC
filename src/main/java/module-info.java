@@ -8,7 +8,12 @@ module caburrasi.marcos.perseus {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
+    requires java.logging;
+    requires java.rmi;
 
     opens caburrasi.marcos.perseus to javafx.fxml;
     exports caburrasi.marcos.perseus;
+
+    exports caburrasi.marcos.perseus.mainscreen;
+    opens caburrasi.marcos.perseus.mainscreen to javafx.fxml;
 }
