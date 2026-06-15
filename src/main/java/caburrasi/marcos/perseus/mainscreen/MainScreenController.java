@@ -2,20 +2,25 @@ package caburrasi.marcos.perseus.mainscreen;
 
 import caburrasi.marcos.perseus.Client;
 import caburrasi.marcos.perseus.NavigationManager;
-import caburrasi.marcos.perseus.Perseus;
+import caburrasi.marcos.perseus.PostParser;
+import caburrasi.marcos.perseus.data.PostData;
+import javafx.collections.ObservableList;
 import javafx.event.Event;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainScreenController {
@@ -23,8 +28,10 @@ public class MainScreenController {
     public Label title;
     public ImageView image;
     public Label content;
+    public VBox postBox;
 
     private Map<String, String> newsContent = new HashMap<>();
+    private List<PostData> posts = new ArrayList<>();
 
     private boolean showPosts = false;
 
@@ -43,7 +50,7 @@ public class MainScreenController {
     public void changeScreen(Event event) throws IOException, InterruptedException {
         showPosts = !showPosts;
 
-        if (showPosts) loadPosts();
+        if (showPosts) PostParser.getInstance().parsePosts(postBox, true, 0);
         else loadNews();
     }
 
@@ -70,7 +77,5 @@ public class MainScreenController {
 
     }
 
-    public void loadPosts(){
 
-    }
 }

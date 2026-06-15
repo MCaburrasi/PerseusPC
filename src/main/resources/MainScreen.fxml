@@ -33,7 +33,14 @@
         <tabs>
           <Tab onSelectionChanged="#changeScreen" text="POSTS">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" prefHeight="773.0" prefWidth="600.0">
+                           <content>
+                              <VBox fx:id="postBox" alignment="TOP_CENTER" prefWidth="572.0" style="-fx-spacing: 15;" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
                </content></Tab>
           <Tab text="NEWS">
                <content>

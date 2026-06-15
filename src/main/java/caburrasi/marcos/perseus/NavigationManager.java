@@ -11,6 +11,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NavigationManager {
+    public static FXMLLoader loader;
+
     public static void open(String url){
         Stage st2 = new Stage();
         Parent padre_2 = null;
