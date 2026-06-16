@@ -15,7 +15,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainScreenController {
-    public FontIcon newPostButton;
+    public ImageView newPostButton;
     public Label title;
     public ImageView image;
     public Label content;

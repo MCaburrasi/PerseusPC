@@ -31,19 +31,21 @@ public class PostParser {
 
         postBox.getChildren().clear();
 
-        String[] sSplit = s.substring(1, s.length() - 1).split(", ");
-        for (String postInfo: sSplit){
-            parsePost(postInfo, postBox, notComment);
-        }
+        if (!s.equalsIgnoreCase("[]")){
+            String[] sSplit = s.substring(1, s.length() - 1).split(", ");
+            for (String postInfo: sSplit){
+                parsePost(postInfo, postBox, notComment);
+            }
 
-        if (!Client.getInstance().getId().equalsIgnoreCase("")){
-            Button b = new Button("Comment");
-            b.setOnAction(event -> {
-                clickedPostId = postId;
-                comment();
-            });
+            if (!Client.getInstance().getId().equalsIgnoreCase("")){
+                Button b = new Button("Comment");
+                b.setOnAction(event -> {
+                    clickedPostId = postId;
+                    comment();
+                });
 
-            postBox.getChildren().add(b);
+                postBox.getChildren().add(b);
+            }
         }
     }
 

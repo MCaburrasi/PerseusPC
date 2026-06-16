@@ -6,7 +6,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -18,7 +17,6 @@ public class NoIPController {
         p.load(new FileInputStream("src/main/java/client.properties"));
 
         p.setProperty("ip", ip.getText());
-        p.store(new FileOutputStream("src/main/java/client.properties"), "ip change");
         ip.setText("");
 
         try {
